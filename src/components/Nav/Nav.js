@@ -4,7 +4,7 @@ import "./Nav.css";
 const Nav = () => (
 <div>
   <nav className="navbar navbar-expand-lg navbar-light">
-    <a className="navbar-brand" href="#">Click-Away</a>
+    <a className="navbar-brand" href="/">Click-Away</a>
     <p className="pt-4">(Parks and Recreaction Theme)</p>
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

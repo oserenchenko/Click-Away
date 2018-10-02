@@ -12,8 +12,8 @@ class App extends Component {
     characters
   };
 
-  shuffleCharacters = arr => {
-    var currentIndex = arr.length, temporaryValue, randomIndex;
+  shuffleCharacters = () => {
+    var currentIndex = characters.length, temporaryValue, randomIndex;
   
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
@@ -23,9 +23,9 @@ class App extends Component {
       currentIndex -= 1;
   
       // And swap it with the current element.
-      temporaryValue = arr[currentIndex];
-      arr[currentIndex] = arr[randomIndex];
-      arr[randomIndex] = temporaryValue;
+      temporaryValue = characters[currentIndex];
+      characters[currentIndex] = characters[randomIndex];
+      characters[randomIndex] = temporaryValue;
     }
   
     this.setState({ characters });

@@ -1,30 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import "./CharacterCard.css";
 
-class FriendCard extends Component {
-  state = {
-    "click": false
-  }
-
-  handleClickChange = () => {
-    if (this.state.click === false) {
-      this.setState({ click : true});
-    } else {
-      console.log("you lost!");
-    }
-    
-    this.props.shuffleCharacters();
-  }
-
-
-  render() {
-    return (
+const FriendCard = (props) => (
     <div className="border">
-      <img className="card-img-bottom" src={this.props.image} alt="character images" onClick={() => this.handleClickChange()}/>
+      <img className="card-img-bottom" id={props.id} clicked={props.clicked} src={props.image} alt="character images" onClick={(e) => props.clickChange(e)}/>
     </div>
-    )
-  };
-
-  }
+);
 
 export default FriendCard;

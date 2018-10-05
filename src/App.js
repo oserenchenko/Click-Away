@@ -9,9 +9,20 @@ import "./App.css";
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    characters
+    characters,
+    "clicked": "false"
   };
 
+  handleClickChange = (e) => {
+   let itemID = e.target.id;
+   let clicked = e.target.getAttribute("clicked");
+    if (clicked === "false") {
+      document.getElementById(itemID).setAttribute("clicked", "true");
+    } else {
+      console.log("you lost!");
+    }
+    this.shuffleCharacters();
+  }
 
   shuffleCharacters = () => {
     var currentIndex = characters.length, temporaryValue, randomIndex;
@@ -41,10 +52,12 @@ class App extends Component {
         {this.state.characters.map(character => (
           <CharacterCard
             shuffleCharacters={this.shuffleCharacters}
+            clickChange={this.handleClickChange}
             id={character.id}
             key={character.id}
             name={character.name}
             image={character.image}
+            clicked={this.state.clicked}
           />
         ))}
       </Wrapper>

@@ -9,7 +9,7 @@ const Nav = (props) => (
       <p className="m-0">Score: {props.score}</p>
       <p className="m-0">Top Score: {props.topScore}</p>
     </div>
-    <p class="todo">{props.children}</p>
+    <p className="todo">{props.children}</p>
   </nav>
 
   <div className="instructions">

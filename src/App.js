@@ -12,6 +12,7 @@ class App extends Component {
     characters
   };
 
+
   shuffleCharacters = () => {
     var currentIndex = characters.length, temporaryValue, randomIndex;
   

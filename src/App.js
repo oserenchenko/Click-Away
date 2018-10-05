@@ -10,7 +10,10 @@ class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     characters,
-    "clicked": "false"
+    "clicked": "false",
+    "score": 0,
+    "topScore": 0,
+    "toDo": "Click on an image to start!"
   };
 
   handleClickChange = (e) => {
@@ -18,10 +21,21 @@ class App extends Component {
    let clicked = e.target.getAttribute("clicked");
     if (clicked === "false") {
       document.getElementById(itemID).setAttribute("clicked", "true");
+      this.setState({score: this.state.score + 1}, this.checkScores);
+      this.setState({toDo: "You guessed correctly!"});
     } else {
       console.log("you lost!");
+      this.setState({score: 0});
+      this.setState({toDo: "You clicked on this image twice :("});
     }
     this.shuffleCharacters();
+  }
+
+  checkScores = () => {
+    if (this.state.score > this.state.topScore) {
+      console.log(this.state.score);
+      this.setState({topScore: this.state.score})
+    }
   }
 
   shuffleCharacters = () => {
@@ -47,7 +61,11 @@ class App extends Component {
   render() {
     return (
       <div>
-      <Nav> </Nav>
+      <Nav
+        score={this.state.score}
+        topScore = {this.state.topScore} >
+        {this.state.toDo}
+      </Nav>
       <Wrapper>
         {this.state.characters.map(character => (
           <CharacterCard

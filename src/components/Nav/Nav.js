@@ -3,7 +3,7 @@ import "./Nav.css";
 
 const Nav = (props) => (
 <div>
-  <nav className="navbar navbar-expand-lg navbar-light">
+  <nav className="navbar navbar-expand-lg navbar-light justify-content-center">
     <a className="navbar-brand flex-column" href="/">Click-Away <p className="flex-column flex-inline subtitle">(Parks and Recreaction Theme)</p></a>
     <div className="scores">
       <p className="m-0">Score: {props.score}</p>

@@ -2,7 +2,7 @@
 
 Click-Away is a Parks and Recreation show themed memory game. It is built using React and Bootstrap. The objective is to get a high score by clicking on an image only once. If an image is clicked on twice, the round is over and the score jumps back to 0.
 
-![](Click_Away_Demo.gif)
+![Click Away Demo](Click_Away_Demo.gif)
 
 ## Getting Started
 

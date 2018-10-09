@@ -6,7 +6,7 @@ Click-Away is a Parks and Recreation show themed memory game. It is built using 
 
 ## Getting Started
 
-The Click-Away game is deployed here:
+The Click-Away game is deployed here: https://oserenchenko.github.io/Click-Away/
 To get the app running locally, the repository can be cloned. Run 'npm install' to install all of the dependencies and then type 'yarn start' in the command line.
 
 ### Prerequisites
